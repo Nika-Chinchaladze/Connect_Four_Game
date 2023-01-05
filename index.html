@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connect Four Game</title>
+    <!-- Bootstrap Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+  <body>
+    <!-- HEADING SECTION -->
+    <div class="headDiv">
+        <button id="myMenuButton" type="button" onclick="menuMethod()">MENU</button>
+        <div class="centralDiv">
+            <div class="myFigDiv">
+                <div class="pinkBall"></div>
+                <div class="yellowBall"></div>
+            </div>
+            <div>
+                <div class="yellowBall"></div>
+                <div class="pinkBall"></div>
+            </div>
+        </div>
+        <button id="myRestart" type="button" onclick="restartGame()">RESTART</button>
+    </div>
+    <p id="myControl" class="text-center text-light">First Player Turn</p>
+
+    <!-- MY BUTTONS DIV -->
+    <div id="ButtonsDiv">
+        <button class="myButton" type="button" onclick="throwBall1()"></button>
+        <button class="myButton" type="button" onclick="throwBallSecond()"></button>
+        <button class="myButton" type="button" onclick="throwBallThird()"></button>
+        <button class="myButton" type="button" onclick="throwBallFour()"></button>
+        <button class="myButton" type="button" onclick="throwBallFive()"></button>
+        <button class="myButton" type="button" onclick="throwBallSix()"></button>
+        <button class="myButton" type="button" onclick="throwBallSeven()"></button>
+    </div>
+
+    <!-- PLAYGROUND DASHBOARD SECTION -->
+    <div class="container-fluid mt-2">
+        <div class="row d-flex justify-content-around align-items-center">
+            <!-- left player score -->
+            <div class="col-lg-3 leftPlayer">
+                <i class="bi bi-emoji-smile-fill mySmile1"></i>
+                <h3>PLAYER 1</h3>
+                <h1 class="FirstplayerScore">0</h1>
+            </div>
+            <!-- Dashboard -->
+            <div class="col-lg-5 dashBoard">
+                <!-- first row -->
+                <div class="connect-row myColumn1">
+                    <div class="ball column1_ball1"></div>
+                    <div class="ball column1_ball2"></div>
+                    <div class="ball column1_ball3"></div>
+                    <div class="ball column1_ball4"></div>
+                    <div class="ball column1_ball5"></div>
+                    <div class="ball column1_ball6"></div>
+                </div>
+                <!-- second row -->
+                <div class="connect-row myColumn2">
+                    <div class="ball column2_ball1"></div>
+                    <div class="ball column2_ball2"></div>
+                    <div class="ball column2_ball3"></div>
+                    <div class="ball column2_ball4"></div>
+                    <div class="ball column2_ball5"></div>
+                    <div class="ball column2_ball6"></div>
+                </div>
+                <!-- third row -->
+                <div class="connect-row myColumn3">
+                    <div class="ball column3_ball1"></div>
+                    <div class="ball column3_ball2"></div>
+                    <div class="ball column3_ball3"></div>
+                    <div class="ball column3_ball4"></div>
+                    <div class="ball column3_ball5"></div>
+                    <div class="ball column3_ball6"></div>
+                </div>
+                <!-- fourth row -->
+                <div class="connect-row myColumn4">
+                    <div class="ball column4_ball1"></div>
+                    <div class="ball column4_ball2"></div>
+                    <div class="ball column4_ball3"></div>
+                    <div class="ball column4_ball4"></div>
+                    <div class="ball column4_ball5"></div>
+                    <div class="ball column4_ball6"></div>
+                </div>
+                <!-- fifth row -->
+                <div class="connect-row myColumn5">
+                    <div class="ball column5_ball1"></div>
+                    <div class="ball column5_ball2"></div>
+                    <div class="ball column5_ball3"></div>
+                    <div class="ball column5_ball4"></div>
+                    <div class="ball column5_ball5"></div>
+                    <div class="ball column5_ball6"></div>
+                </div>
+                <!-- sixth row -->
+                <div class="connect-row myColumn6">
+                    <div class="ball column6_ball1"></div>
+                    <div class="ball column6_ball2"></div>
+                    <div class="ball column6_ball3"></div>
+                    <div class="ball column6_ball4"></div>
+                    <div class="ball column6_ball5"></div>
+                    <div class="ball column6_ball6"></div>
+                </div>
+                <!-- seventh row -->
+                <div class="connect-row myColumn7">
+                    <div class="ball column7_ball1"></div>
+                    <div class="ball column7_ball2"></div>
+                    <div class="ball column7_ball3"></div>
+                    <div class="ball column7_ball4"></div>
+                    <div class="ball column7_ball5"></div>
+                    <div class="ball column7_ball6"></div>
+                </div>
+
+                <!-- timer div -->
+                <div class="triangleDIv"></div>
+                <div class="squareDiv"><p>00:00:00</p></div>
+                <!-- ball elements -->
+
+            </div>
+            <!-- right player score -->
+            <div class="col-lg-3 rightPlayer">
+                <i class="bi bi-emoji-smile-fill mySmile2"></i>
+                <h3>PLAYER 2</h3>
+                <h1 class="SecondplayerScore">0</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- My Javascript Functionality Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
