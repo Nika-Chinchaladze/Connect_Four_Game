@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: darkviolet;
+    font-family: "Roboto Condensed";
+}
+
+/* Heading Section */
+.headDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 50px;
+}
+.headDiv button {
+    background-color: indigo;
+    color: wheat;
+    font-weight: bold;
+    border-style: none;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+.centralDiv {
+    display: flex;
+}
+.pinkBall, .yellowBall {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 3px;
+    box-shadow: inset 0 -8px 6px -6px black;
+}
+.yellowBall {
+    background-color: rgb(219, 219, 44);
+}
+.pinkBall {
+    background-color: rgb(153, 36, 65);
+}
+
+/* LEFT PLAYER SECTION */
+.leftPlayer, .rightPlayer {
+    width: 150px;
+    height: 180px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow: 0 15px 15px -6px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mySmile1, .mySmile2 {
+    font-size: 3rem;
+    position: absolute;
+    left: 35%;
+    top: -20%;
+}
+.mySmile1 {
+    color:rgb(219, 219, 44);
+}
+.mySmile2 {
+    color:rgb(153, 36, 65);
+}
+
+/* Dashboard Section */
+.dashBoard {
+    box-sizing: border-box;
+    width: 35%;
+    height: 500px;
+    background-color: rgb(236, 239, 241);
+    border-radius: 30px;
+    box-shadow: 0 15px 6px -6px black;
+    padding: 40px 0 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.connect-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.ball {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: darkviolet;
+    color: transparent;
+    box-shadow: inset 0 10px 6px -6px black;
+    margin: 5px;
+    text-align: center;
+}
+#ButtonsDiv {
+    z-index: 1;
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 32.5%;
+    top: 18%;
+}
+.myButton {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid rgb(120, 19, 202);
+    border-bottom-style: none;
+}
+.yellowClass, .pinkClass {
+    width: 0;
+    height: 0;
+}
+.yellowClass:hover {
+    border-top: 30px solid rgb(219, 219, 44);
+}
+.pinkClass:hover {
+    border-top: 30px solid rgb(153, 36, 65);
+}
+
+/* PENTAGON DIV FOR TIMER */
+.squareDiv {
+    height: 50px;
+    width: 180px;
+    background-color: palevioletred;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: -6%;
+    left: 31.5%;
+    box-shadow: 0 15px 10px -6px black;
+}
+.squareDiv p {
+    text-align: center;
+    color: azure;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.triangleDIv {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 40px solid palevioletred;
+    position: absolute;
+    left: 31.5%;
+    bottom: 4%;
+}
+#myControl {
+    margin: 0;
+    padding: 0;
+}
+
+/* Answer Section */
+.myAnswerBallYellow, .myAnswerBallPink, .secondYellowBall, .secondPinkBall, .thirdYellowBall, .thirdPinkBall, .fourYellowBall, .fourPinkBall, .fiveYellowBall, .fivePinkBall, .sixYellowBall, .sixPinkBall, .sevenYellowBall, .sevenPinkBall {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    border: 2px solid black;
+    box-shadow: inset 0 10px 6px -6px black;
+    visibility: hidden;
+    margin: 0;
+}
+.myAnswerBallYellow {
+    left: 6px;
+    background-color: rgb(219, 219, 44);
+}
+.myAnswerBallPink {
+    left: 6px;
+    background-color: rgb(153, 36, 65);
+}
+.secondYellowBall {
+    left: 74px;
+    background-color: rgb(219, 219, 44);
+}
+.secondPinkBall {
+    left: 74px;
+    background-color: rgb(153, 36, 65);
+}
+.thirdYellowBall {
+    left: 142px;
+    background-color: rgb(219, 219, 44);
+}
+.thirdPinkBall {
+    left: 142px;
+    background-color: rgb(153, 36, 65);
+}
+.fourYellowBall {
+    left: 210px;
+    background-color: rgb(219, 219, 44);
+}
+.fourPinkBall {
+    left: 210px;
+    background-color: rgb(153, 36, 65);
+}
+.fiveYellowBall {
+    right: 142px;
+    background-color: rgb(219, 219, 44);
+}
+.fivePinkBall {
+    right: 142px;
+    background-color: rgb(153, 36, 65);
+}
+.sixYellowBall {
+    right: 74px;
+    background-color: rgb(219, 219, 44);
+}
+.sixPinkBall {
+    right: 74px;
+    background-color: rgb(153, 36, 65);
+}
+.sevenYellowBall {
+    right: 6px;
+    background-color: rgb(219, 219, 44);
+}
+.sevenPinkBall {
+    right: 6px;
+    background-color: rgb(153, 36, 65);
+}
+
+/* MENU DIV  */
+.menuDiv {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    color: rgba(0, 0, 0, 0.651);
+    position: absolute;
+    left: 25%;
+    top: 12%;
+    bottom: 0.5%;
+    z-index: 2;
+}
+.menuDiv h1:nth-of-type(1) {
+    text-align: center;
+    margin-top: 20px;
+}
+.menuDiv h1:nth-of-type(2) {
+    text-align: center;
+    margin-top: 50px;
+}
+.menuDiv ul {
+    margin: 10px 0;
+}
+.menuDiv li {
+    font-size: 1.5rem;
+}
+
+/* RESULT DIV  */
+.showResult {
+    width: 35%;
+    height: 500px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 5px solid aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 32.5%;
+    top: 17%;
+    z-index: 3;
+}
+.showResult h1 {
+    font-weight: bold;
+}
+.addYellow {
+    background-color: rgb(219, 219, 44);
+}
+.addPink {
+    color: azure;
+    background-color: rgb(153, 36, 65);
+}
+
+/* MEDIA QUERY FOR IPAD  */
+@media (min-width: 577px) and (max-width: 820px) {
+    .dashBoard {
+        margin-top: 100px;
+        width: 80%;
+    }
+    .leftPlayer, .rightPlayer {
+        width: 300px;
+        height: 80px;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .leftPlayer {
+        top: 10%;
+        left: 12%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px 0;
+    }
+    .rightPlayer {
+        top: 10%;
+        right: 12%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px 0;
+    }
+    .mySmile1 {
+        top: 2%;
+        left: -8%;
+    }
+    .mySmile2 {
+        top: 2%;
+        left: 92%;
+    }
+    .triangleDIv, .squareDiv {
+        left: 36%;
+    }
+    #ButtonsDiv {
+        width: 80%;
+        left: 10%;
+        top: 18.5%;
+    }
+    .menuDiv {
+        width: 84%;
+        height: 650px;
+        padding: 0 10px;
+        left: 8%;
+        top: 10%;
+    }
+    /* ball launch place */
+    .myAnswerBallYellow, .myAnswerBallPink {
+        left: 19px;
+    }
+    .secondYellowBall, .secondPinkBall {
+        left: 113px;
+    }
+    .thirdYellowBall, .thirdPinkBall {
+        left: 206px;
+    }
+    .fourYellowBall, .fourPinkBall {
+        left: 300px;
+    }
+    .fiveYellowBall, .fivePinkBall {
+        right: 206px;
+    }
+    .sixYellowBall, .sixPinkBall {
+        right: 113px;
+    }
+    .sevenYellowBall, .sevenPinkBall {
+        right: 19px;
+    }
+    /* result  */
+    .showResult {
+        width: 80%;
+        height: 520px;
+        top: 17.5%;
+        left: 10%;
+    }
+}
+
+
+/* MEDIA QUERY FOR SMARPHONES */
+@media (max-width: 576px) {
+    .headDiv {
+        padding: 5px 0;
+    }
+    .myFigDiv {
+        margin-left: 15px;
+    }
+    .dashBoard {
+        width: 98%;
+        height: 420px;
+        position: absolute;
+        top: 30%;
+        left: 1%;
+    }
+    .ball {
+        width: 40px;
+        height: 40px;
+    }
+    .leftPlayer, .rightPlayer {
+        width: 150px;
+        height: 80px;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .leftPlayer {
+        top: 17%;
+        left: 4%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .rightPlayer {
+        top: 17%;
+        right: 4%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .mySmile1, .mySmile2 {
+        top: -50%;
+    }
+    .triangleDIv, .squareDiv {
+        left: 25%;
+    }
+    .triangleDIv {
+        bottom: 6%;
+    }
+    #ButtonsDiv {
+        width: 98%;
+        left: 1%;
+        top: 32%;
+    }
+    .myButton {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 20px solid rgb(120, 19, 202);
+    }
+    .yellowClass:hover {
+        border-top: 20px solid rgb(219, 219, 44);
+    }
+    .pinkClass:hover {
+        border-top: 20px solid rgb(153, 36, 65);
+    }
+    .menuDiv {
+        width: 98%;
+        height: 650px;
+        padding: 0 10px;
+        left: 1%;
+        top: 10.5%;
+    }
+    .menuDiv h1 {
+        font-size: 2rem;
+    }
+    .menuDiv li {
+        font-size: 1.2rem;
+    }
+    /* created balls */
+    .myAnswerBallYellow, .myAnswerBallPink, .secondYellowBall, .secondPinkBall, .thirdYellowBall, .thirdPinkBall, .fourYellowBall, .fourPinkBall, .fiveYellowBall, .fivePinkBall, .sixYellowBall, .sixPinkBall, .sevenYellowBall, .sevenPinkBall {
+        width: 40px;
+        height: 40px;
+    }
+    /* ball launch place */
+    .myAnswerBallYellow, .myAnswerBallPink {
+        left: 5px;
+    }
+    .secondYellowBall, .secondPinkBall {
+        left: 55px;
+    }
+    .thirdYellowBall, .thirdPinkBall {
+        left: 106px;
+    }
+    .fourYellowBall, .fourPinkBall {
+        left: 156px;
+    }
+    .fiveYellowBall, .fivePinkBall {
+        right: 106px;
+    }
+    .sixYellowBall, .sixPinkBall {
+        right: 55px;
+    }
+    .sevenYellowBall, .sevenPinkBall {
+        right: 5px;
+    }
+    /* result  */
+    .showResult {
+        width: 98%;
+        height: 450px;
+        top: 29%;
+        left: 1%;
+    }
+}
